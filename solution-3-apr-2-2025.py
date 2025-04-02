@@ -37,11 +37,11 @@ def solution(numbers):
         else:
             intermediate_list.append(i + 1)
     for i in intermediate_list:
-        if i in count.keys():
+        if i in count:
             count[i] += 1
         else:
             count[i] = 1
     for key, value in count.items():
         final_list.append(key * value)
-    final_list.sort(reverse=False)
+    final_list.sort()
     return final_list
